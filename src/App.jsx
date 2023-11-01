@@ -1,18 +1,15 @@
-import { useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import Signup from "./components/signup";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Login from "./components/login";
+import Header from './components/header';
+import Footer from './components/footer';
+import FirstPage from './components/firstPage';
 
 function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/register" element={<Signup />}></Route>
-        <Route path="/login" element={<Login />}></Route>
-      </Routes>
-    </BrowserRouter>
-  );
+    return (
+        <div>
+            <Header />
+            <FirstPage />
+            <Footer />
+        </div>
+    );
 }
 
 export default App;
