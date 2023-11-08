@@ -145,7 +145,7 @@ body {
   transition: 0.2s;
   font-size: large;
   border-radius: 50px;
-  margin-top: 8cm;
+  margin-top: 110%;
 }
 
 .logout:hover {
@@ -164,4 +164,45 @@ body {
   z-index: 1;
   background-color: #1b1b1e;
   border:none;
+  border-radius: 50px;
 }
+
+
+.task-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: larger;
+  width: 100%;
+  border-radius: 50px;
+}
+
+.circle-checkbox {
+  width: 25px;
+  height: 30px;
+  border-radius: 100%;
+  margin-right: 10px;
+  margin-left: -1cm;
+}
+
+.task-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  font-size: medium;
+  border-color: #000000;
+  padding: 5px; /* Add padding to ensure consistent size */
+}
+
+.add-task-button{
+  background-color: #8566f5;
+  border: none;
+  outline: none;
+  font-size: larger;
+}
+
+
+
+
+
