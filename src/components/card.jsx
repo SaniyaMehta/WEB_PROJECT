@@ -29,7 +29,7 @@ const Card = () => {
   const toggleContent = () => {
     setContentVisible(!contentVisible);
   };
-  console.log(darkMode);
+  
   return (
     <div className={` ${darkMode ? "dark-mode" : ""} `}
      style={{
