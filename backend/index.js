@@ -2,9 +2,9 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const userModel = require("./model/signups");
-
+ 
 const app = express();
-app.use(express.json());
+app.use(express.json()); 
 app.use(cors());
 
 mongoose.connect(
@@ -14,7 +14,7 @@ mongoose.connect(
 app.post("/login", async (req, res) => {
   const { email, password } = req.body;
 
-  try {
+  try {    
     const user = await userModel.findOne({ email });
 
     if (!user) {
