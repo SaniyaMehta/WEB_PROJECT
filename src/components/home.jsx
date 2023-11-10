@@ -17,40 +17,40 @@ const App = () => {
     const newCard = <Card key={cards.length} />;
     setCards([...cards, newCard]);
   };
-  
 
   return (
     <div className={darkMode ? "dark-mode" : ""}>
-      
-      <div className={`navigation ${darkMode ? "dark-mode-content" : ""}`}
-      style={{
-        backgroundColor: darkMode ? 'black' : '#ccc', 
-      }}>
+      <div
+        className={`navigation ${darkMode ? "dark-mode-content" : ""}`}
+        style={{
+          backgroundColor: darkMode ? "black" : "#ccc",
+        }}
+      >
         <nav className="navbar navbar-expand-lg custom-navbar">
           <div className="container-fluid">
             <a className="navbar-brand" href="#">
               <img className="logo-image" src={logo} alt="Logo" />
               Doer
             </a>
-           
+
             <div
-  className={`welcome-container ${darkMode ? "dark-mode-content" : ""}`}
-  style={{
-    fontSize: '2.5rem',
-// Yellow in dark mode, grey in white mode
-  }}
->
-
-
+              className={`welcome-container ${
+                darkMode ? "dark-mode-content" : ""
+              }`}
+              style={{
+                fontSize: "2.5rem",
+                
+              }}
+            >
               <div className="welcome-message">Welcome back, user!</div>
             </div>
             <div className="left-nav">
               <div className="icon-container" onClick={toggleDarkMode}>
-              {darkMode ? (
-            <i className="bi-moon-fill dark-mode-icon"></i>
-          ) : (
-            <i className="bi-sun-fill dark-mode-icon"></i>
-          )}
+                {darkMode ? (
+                  <i className="bi-moon-fill dark-mode-icon"></i>
+                ) : (
+                  <i className="bi-sun-fill dark-mode-icon"></i>
+                )}
               </div>
               <div className="icon-container" onClick={addCard}>
                 <i className="bi-plus-circle-fill add-icon"></i>
@@ -76,18 +76,25 @@ const App = () => {
           <SideNavbar />
         </div>
         <div>
-        <div className={`main-content ${darkMode ? "dark-mode-content" : ""}`}>
+          <div
+            className={`main-content ${darkMode ? "dark-mode-content" : ""}`}
+          >
             <MainPage />
           </div>
-          <div className={`second-main-content ${darkMode ? "dark-mode-content" : ""}`}>
-          <div className="card-grid">
-            {cards.map((card, index) => (
-              <div key={index} className="horizontal-card">
-                {card}
-              </div>))}
+          <div
+            className={`second-main-content ${
+              darkMode ? "dark-mode-content" : ""
+            }`}
+          >
+            <div className="card-grid">
+              {cards.map((card, index) => (
+                <div key={index} className="horizontal-card">
+                  {card}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
       </div>
     </div>
   );
